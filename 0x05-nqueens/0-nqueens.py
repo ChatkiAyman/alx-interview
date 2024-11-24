@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import sys
 
+
 def is_safe(board, row, col, N):
     # Check this column on the left side
     for i in range(row):
@@ -9,6 +10,7 @@ def is_safe(board, row, col, N):
            board[i] + i == col + row:
             return False
     return True
+
 
 def solve_nqueens(N):
     def backtrack(row):
@@ -27,6 +29,7 @@ def solve_nqueens(N):
     solutions = []
     backtrack(0)
     return solutions
+
 
 def main():
     if len(sys.argv) != 2:
